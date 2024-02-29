@@ -94,8 +94,12 @@ public class Pizza {
 
     public String getBill(){
         // your code goes here
-        this.bill += "Total Price: " + this.price+ "\n";
+        if(!this.billFlag){
+            this.billFlag = true;
+            this.bill += "Total Price: " + this.price+ "\n";
 //        setBill(billTotal);
+
+        }
         return this.bill;
 
     }
